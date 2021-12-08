@@ -1,6 +1,6 @@
 import React from 'react';
-import '../leaflet.css';
-import '../leaflet.draw.css';
+import '../public/leaflet.css';
+import '../public/leaflet.draw.css';
 import L from 'leaflet';
 import './MapRoot.css';
 
