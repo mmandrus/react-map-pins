@@ -1,0 +1,9 @@
+#map {
+	height: calc(100% - 2px);
+	width: calc(100% - 2px);
+}
+
+.leaflet-draw-draw-circlemarker.disabled {
+	pointer-events: none;
+	opacity: 0.8;
+}

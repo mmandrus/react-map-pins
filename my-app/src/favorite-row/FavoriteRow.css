@@ -1,0 +1,41 @@
+.favorite-row {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+	margin-bottom: 3px;
+}
+
+.favorite-header {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+.circle {
+	width: 44px;
+}
+
+.circle svg {
+	width: 30px;
+}
+
+.text {
+	line-height: 30px;
+	vertical-align: top;
+	width: auto;
+	text-align: left;
+}
+
+.marker-name {
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	display: block;
+	font-size: 1.1em;
+}
+
+.links {
+	width: 56px;
+	line-height: 1em;
+	text-align: center;
+}

@@ -1,0 +1,6 @@
+#element-list {
+	width: 100%;
+	height: calc(100vh - 70px);
+	overflow-y: auto;
+	margin-top: -6px;
+}
