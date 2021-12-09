@@ -4,8 +4,13 @@ import LoginPrompt from './login-prompt/LoginPrompt';
 import SplitPanel from './split-panel/SplitPanel';
 import persist from './persist-service';
 
+/** @class App top-level renderer for the application */
 class App extends React.Component {	
 
+	/**
+	 * @constructor
+	 * @param {Object} props empty props
+	 */
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -19,6 +24,11 @@ class App extends React.Component {
 		}
 	}
 	
+	/**
+	 * Handler for "logging in" to the "server"
+	 * Retrieves that user's map markers and saves the username to localstorage
+	 * @param {string} username the submitted username
+	 */
 	handleLogin(username) {
 		persist.getPoints(username)
 			.then((json) => {
@@ -31,6 +41,11 @@ class App extends React.Component {
 
 	}
 	
+	/**
+	 * Handler for "logging out"
+	 * Clears user from state and removes map points
+	 * @param {import('react').SyntheticEvent} e the react event
+	 */
 	handleLogout(e) {
 		e.preventDefault();
 		this.setState({
@@ -44,7 +59,8 @@ class App extends React.Component {
 		return (
 			<div className="App">
 				{!this.state.loggedInUser ? 
-					<LoginPrompt handleLogin={this.handleLogin}/> : <SplitPanel loggedInUser={this.state.loggedInUser} initialPoints={this.state.initialPoints} handleLogout={this.handleLogout}/>}
+						<LoginPrompt handleLogin={this.handleLogin}/> : 
+						<SplitPanel loggedInUser={this.state.loggedInUser} initialPoints={this.state.initialPoints} handleLogout={this.handleLogout}/>}
 			</div>
 		);
 	}

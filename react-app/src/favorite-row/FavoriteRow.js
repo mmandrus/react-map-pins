@@ -1,8 +1,25 @@
+import { CircleMarker } from 'leaflet';
 import React from 'react';
 import './FavoriteRow.css';
 
+/** @class FavoriteRow display a single marker representation in the favorites list */
 class FavoriteRow extends React.Component {
 	
+	/**
+	 * @constructor
+	 * @param {Object} props - constructor properties
+	 * @param {string} props.markerName - the marker name
+	 * @param {string} props.markerColor - the marker color
+	 * @param {CircleMarker} props.marker - the Leaflet CircleMarker
+	 * @param {string} props.uuid - the marker UUID
+	 * @param {Function} props.flyToPoint - passed in handler to zoom to a marker
+	 * @param {Function} props.editPoint - passed in handler to edit a marker
+	 * @param {Function} props.showAllPoints - passed in handler to set map extent to contain all markers
+	 */
+	constructor(props) {
+		super(props);
+	}
+
 	render() {
 		return (
 			<table className="favorite-row">

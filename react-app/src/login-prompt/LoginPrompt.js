@@ -1,8 +1,14 @@
 import React from 'react';
 import './LoginPrompt.css';
 
+/** @class LoginPrompt displays a modal login form */
 class LoginPrompt extends React.Component {
 	
+	/**
+	 * @constructor
+	 * @param {Object} props constructor properties
+	 * @param {Function} props.handleLogin login handler passed in from parent
+	 */
 	constructor(props) {
 		super(props);
 		
@@ -13,11 +19,20 @@ class LoginPrompt extends React.Component {
 		this.handleType = this.handleType.bind(this);
 	}
 	
+	/**
+	 * Handler for the submit button click.
+	 * Bubbles up to passed-in handler
+	 * @param {import('react').SyntheticEvent} e button click event
+	 */
 	handleClick(e) {
 		e.preventDefault();
 		this.props.handleLogin(this.state.username);
 	}
 	
+	/**
+	 * Handler for typing in the username field
+	 * @param {import('react').SyntheticEvent} e text input change event 
+	 */
 	handleType(e) {
 		this.setState({
 			username: e.target.value
