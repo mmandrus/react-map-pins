@@ -1,6 +1,4 @@
-# Introduction
-
-This app was conceived in order to refresh myself on the basics of React. The goal was to come up with an app sufficiently complicated and nested so as to force thoughtful organization of components and their state. I added persistence for the sake of realism. The Leaflet and Leaflet Draw libraries were used in their "standard" form (i.e. not the React-ized versions) as an additional exercise in incorporating non-react UI elements into a react app.
+# Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
